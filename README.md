@@ -31,26 +31,41 @@ This project Ext JS wrapper for (https://github.com/browserstate/history.js):
 
 ### Functions
 
-####History.pushState(Object data, String title, String url)
+####History.pushState(data, title, url)
 Adds a new History entry
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
 - `title` (String) The title for this entry
 - `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
 
-- `History.replaceState(data,title,url)` <br/> Replaces the existing state with a new state to the browser; `data` can be null or an object, `title` can be null or a string, `url` must be a string
-- `History.getState()` <br/> Gets the current state of the browser, returns an object with `data`, `title` and `url`
-- `History.getHash()` <br/> Gets the current hash of the browser
-- `History.Adapter.bind(element,event,callback)` <br/> A framework independent event binder, you may either use this or your framework's native event binder.
-- `History.Adapter.trigger(element,event)` <br/> A framework independent event trigger, you may either use this or your framework's native event trigger.
-- `History.Adapter.onDomLoad(callback)` <br/> A framework independent onDomLoad binder, you may either use this or your framework's native onDomLoad binder.
-- `History.back()` <br/> Go back once through the history (same as hitting the browser's back button)
-- `History.forward()` <br/> Go forward once through the history (same as hitting the browser's forward button)
-- `History.go(X)` <br/> If X is negative go back through history X times, if X is positive go forwards through history X times
-- `History.log(...)` <br/> Logs messages to the console, the log element, and fallbacks to alert if neither of those two exist
-- `History.debug(...)` <br/> Same as `History.log` but only runs if `History.debug.enable === true`
+####History.replaceState(data, title, url)
+Replace the current history state
+- `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
+- `title` (String) The title for this entry
+- `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
+
+####History.getState()
+Return the current History state as an object with the following properties:
+- `data` (Object) The data associated with this entry. 
+- `title` (String) The title for this entry
+- `url`  (String) 
+
+####History.back()
+Go back one entry in the History (same as hitting the browser's back button)
+
+####History.forward()
+Go forward one entry in the History (same as hitting the browser's forward button)
+
+####History.go(x)
+Moves `x` entries in the History. Use a negative number to move backwards.
+- `x` (Number) The number of entries to move 
 
 ### Events
 
-- `window.onstatechange` <br/> Fired when the state of the page changes (does not include hash changes)
-- `window.onanchorchange` <br/> Fired when the anchor of the page changes (does not include state hashes)
+####statechange
+Fired when the state of the page changes. The event object contains the following properties:
+- `data` (Object) The data associated with this entry. 
+- `title` (String) The title for this entry
+- `url`  (String) 
+
+
 
