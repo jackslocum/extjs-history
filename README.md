@@ -41,7 +41,7 @@ Go back one entry in the History (same as hitting the browser's back button)
 ####forward()
 Go forward one entry in the History (same as hitting the browser's forward button)
 
-####.go(x)
+####go(x)
 Moves `x` entries in the History. Use a negative number to move backwards.
 - `x` (Number) The number of entries to move 
 
