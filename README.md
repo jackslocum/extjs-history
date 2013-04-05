@@ -9,11 +9,10 @@ browser implementation of the [HTML5 History API](https://developer.mozilla.org/
 ### Functions
 
 ####History.init()
-Initialize the History class. Must be called before use. Can be called more than once.
+Initialize the History class. Must be called before use. Can be called more than once.<br/>
 Example:<br/>
 `xui.History.init();`<br/>
-`xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
-
+`var state = xui.History.getState();`
 
 ####History.pushState(data, title, url)
 Adds a new History entry
