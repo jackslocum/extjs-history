@@ -1,7 +1,8 @@
 extjs-history
 =============
 
-This project Ext JS wrapper for (https://github.com/browserstate/history.js):
+This project Ext JS wrapper for (https://github.com/browserstate/history.js) which provides a cross 
+browser implementation of the [HTML5 History API](https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history). 
 
 ## Exposed API
 
