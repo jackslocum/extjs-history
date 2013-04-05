@@ -10,9 +10,9 @@ browser implementation of the [HTML5 History API](https://developer.mozilla.org/
 
 ####History.init()
 Initialize the History class. Must be called before use. Can be called more than once.
-Example:
-`xui.History.init();
-xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
+Example:<br/>
+`xui.History.init();`<br/>
+`xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
 
 
 ####History.pushState(data, title, url)
@@ -21,7 +21,7 @@ Adds a new History entry
 - `title` (String) The title for this entry
 - `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
 
-Example:
+Example:<br/>
 `xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
 
 ####History.replaceState(data, title, url)
