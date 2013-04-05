@@ -31,10 +31,10 @@ This project Ext JS wrapper for (https://github.com/browserstate/history.js):
 
 ### Functions
 
-- `History.pushState(data,title,url)` <br/> Adds a new History entry
+- `History.pushState(Object data, [String title], **String url**)` <br/> Adds a new History entry
     * data (Object) The data associated with this entry. Accessible as event.data on statechange event object.
     * title (String) The title for this entry
-    * url  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. IE8 support requires this to be  urlencoded, e.g. '?report=/shipping/overview'
+    * url  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
 
 - `History.replaceState(data,title,url)` <br/> Replaces the existing state with a new state to the browser; `data` can be null or an object, `title` can be null or a string, `url` must be a string
 - `History.getState()` <br/> Gets the current state of the browser, returns an object with `data`, `title` and `url`
