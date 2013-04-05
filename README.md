@@ -67,5 +67,8 @@ Fired when the state of the page changes. The event object contains the followin
 - `title` (String) The title for this entry
 - `url`  (String) 
 
+'xui.History.on('statechange', function(e){
+    console.log(e.data);
+});`
 
 
