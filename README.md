@@ -3,30 +3,6 @@ extjs-history
 
 This project Ext JS wrapper for (https://github.com/browserstate/history.js):
 
-- Follow the [HTML5 History API](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history) as much as possible
-- Provide a cross-compatible experience for all HTML5 Browsers (they all implement the HTML5 History API a little bit differently causing different behaviours and sometimes bugs - History.js fixes this ensuring the experience is as expected / the same / great throughout the HTML5 browsers)
-- Provide a backwards-compatible experience for all HTML4 Browsers using a hash-fallback (including continued support for the HTML5 History API's `data`, `title`, `pushState` and `replaceState`) with the option to [remove HTML4 support if it is not right for your application](https://github.com/browserstate/history.js/wiki/Intelligent-State-Handling)
-- Provide a forwards-compatible experience for HTML4 States to HTML5 States (so if a hash-fallbacked url is accessed by a HTML5 browser it is naturally transformed into its non-hashed url equivalent)
-
-## Browsers: Tested and Working In
-
-### HTML5 Browsers
-
-- Firefox 4+
-- Chrome 8+
-- Opera 11.5
-- Safari 5.0+
-- Safari iOS 4.3+
-
-### HTML4 Browsers
-
-- IE 6, 7, 8, 9
-- Firefox 3
-- Opera 10, 11.0
-- Safari 4
-- Safari iOS 4.2, 4.1, 4.0, 3.2
-
-
 ## Exposed API
 
 ### Functions
@@ -74,5 +50,25 @@ Example:
 `xui.History.on('statechange', function(e){
     console.log(e.data);
 });`
+
+## Browsers: Tested and Working In
+
+### HTML5 Browsers
+
+- Firefox 4+
+- Chrome 8+
+- Opera 11.5
+- Safari 5.0+
+- Safari iOS 4.3+
+
+### HTML4 Browsers
+
+- IE 6, 7, 8, 9
+- Firefox 3
+- Opera 10, 11.0
+- Safari 4
+- Safari iOS 4.2, 4.1, 4.0, 3.2
+
+
 
 
