@@ -31,7 +31,7 @@ This project Ext JS wrapper for (https://github.com/browserstate/history.js):
 
 ### Functions
 
-`History.pushState(Object data, String title, String url)` <br/> Adds a new History entry
+**`History.pushState(Object data, String title, String url)`** <br/> Adds a new History entry
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
 - `title` (String) The title for this entry
 - `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
