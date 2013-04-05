@@ -8,6 +8,13 @@ browser implementation of the [HTML5 History API](https://developer.mozilla.org/
 
 ### Functions
 
+####History.init()
+Initialize the History class. Must be called before use. Can be called more than once.
+Example:
+`xui.History.init();
+xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
+
+
 ####History.pushState(data, title, url)
 Adds a new History entry
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.

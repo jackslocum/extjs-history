@@ -2564,7 +2564,7 @@ Ext.define('xui.History', function(){
         },
 
         /**
-         * Initialize the History. Must be called before use.
+         * Initialize the History. Must be called before using History.
          */
         init: function(){
             History.init();
