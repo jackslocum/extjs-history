@@ -37,6 +37,9 @@ Adds a new History entry
 - `title` (String) The title for this entry
 - `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
 
+Example:
+`xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
+
 ####History.replaceState(data, title, url)
 Replace the current history state
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
@@ -67,7 +70,8 @@ Fired when the state of the page changes. The event object contains the followin
 - `title` (String) The title for this entry
 - `url`  (String) 
 
-'xui.History.on('statechange', function(e){
+Example:
+`xui.History.on('statechange', function(e){
     console.log(e.data);
 });`
 
