@@ -8,13 +8,13 @@ browser implementation of the [HTML5 History API](https://developer.mozilla.org/
 
 ### Functions
 
-####xui.History.init()
+####init()
 Initialize the History class. Must be called before use. Can be called more than once.<br/>
 Example:<br/>
 `xui.History.init();`<br/>
 `var state = xui.History.getState();`
 
-####xui.History.pushState(data, title, url)
+####pushState(data, title, url)
 Adds a new History entry
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
 - `title` (String) The title for this entry
@@ -23,25 +23,25 @@ Adds a new History entry
 Example:<br/>
 `xui.History.pushState({name: 'Jack', ninja: true}, 'Jack Slocum', '?user=1234');`
 
-####xui.History.replaceState(data, title, url)
+####replaceState(data, title, url)
 Replace the current history state
 - `data` (Object) The data associated with this entry. Accessible as event.data on statechange event object.
 - `title` (String) The title for this entry
 - `url`  (String) REQUIRED for IE8 to work - The History class will attempt to fix the URL to be compatible with the document URL. For IE8 and HTML5 browsers to play well together, this format works well: '?report=/shipping/overview'
 
-####xui.History.getState()
+####getState()
 Return the current History state as an object with the following properties:
 - `data` (Object) The data associated with this entry. 
 - `title` (String) The title for this entry
 - `url`  (String) 
 
-####xui.History.back()
+####back()
 Go back one entry in the History (same as hitting the browser's back button)
 
-####xui.History.forward()
+####forward()
 Go forward one entry in the History (same as hitting the browser's forward button)
 
-####xui.History.go(x)
+####.go(x)
 Moves `x` entries in the History. Use a negative number to move backwards.
 - `x` (Number) The number of entries to move 
 
