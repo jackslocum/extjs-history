@@ -2,7 +2,7 @@
  * @class xui.History
  * @singleton
  * Provides an Ext JS wrapper around history.js for cross browser support for the HTML5 History/State API
- * https://github.com/browserstate/history.js
+ * See https://github.com/browserstate/history.js
  * See Also https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history
  *
  * The {@link #init} method of the History object must be called before using History
@@ -44,6 +44,7 @@ Ext.define('xui.History', function(){
         }
     };
 
+    
 	History.initHtml4 = function(){
 		History.enabled = true;
 
